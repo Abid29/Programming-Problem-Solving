@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-long long a[100005],dp[10005];
+long long a[100005],dp[10005],md=1e9+7;
 int main(){
     int i,n,s;
     cin>>n>>s;
@@ -16,14 +16,14 @@ int main(){
 
     while(r<=n){
         for(i=s;i>=a[r];i--){
-            dp[i] += (dp[i-a[r]]);
+            dp[i] = (dp[i]+dp[i-a[r]])%md;
         }
         r++;
         while(dp[s]>0){
             //cout<<r<<" "<<l<<" "<<dp[s]<<endl;
             ans = min(ans,r-l);
             for(i=0;i<s;i++){
-                if(dp[i]) dp[i+a[l]] -= dp[i];
+                if(dp[i]) dp[i+a[l]] = (dp[i+a[l]]-dp[i]+md)%md;
             }
             l++;
         }

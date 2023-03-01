@@ -1,0 +1,1 @@
+{"name":"Local: h","url":"f:\\Programming Problem Solving\\Suffix Array\\h.cpp","tests":[{"id":1677146735651,"input":"6 3\n32 16 8 4 2 1","output":"4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Programming Problem Solving\\Suffix Array\\h.cpp","group":"local","local":true}
