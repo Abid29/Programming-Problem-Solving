@@ -34,6 +34,8 @@ void updateClass(){
     for(int i=0;i<n;i++) cls[i] = ncls[i];
 }
 
+//Hacked by ESHA
+
 int main(){
     string s; cin >> s;
     s+='$'; n = s.size();

@@ -37,15 +37,15 @@ void updateClass(){
 
 int solve1(){
 
-    for(int i=0;i<=n;i++) cnt[i] = cls[i] = ord[i] = 0;
+    for(int i=0;i<=max(n,140);i++) cnt[i] = cls[i] = ord[i] = 0;
 
-    for(char ch : s) cnt[ch] ++;
+    for(char ch : s) cnt[(int)ch] ++;
 
     cnt['$'] = 0;
     for(int i=1;i<130;i++) cnt[i] += cnt[i-1];
 
     //cout<<cnt['$']<<endl;
-    for(int i=0;i<n;i++) ord[cnt[s[i]]--] = i;
+    for(int i=0;i<n;i++) ord[cnt[(int)s[i]]--] = i;
 
     int cc=0;  cls[ord[0]] = 0;
     for(int i=1;i < n; i++){
