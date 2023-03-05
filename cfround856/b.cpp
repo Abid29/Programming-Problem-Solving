@@ -10,6 +10,7 @@ int main(){
         for(i=0;i<n;i++) cin>>a[i];
         a[0]++;
         for(i=1;i<n;i++){
+            if(a[i]==1) a[i]++;
             if(a[i]%a[i-1]==0) a[i]++;
         }
         for(i=0;i<n;i++) cout<<a[i]<<' ';

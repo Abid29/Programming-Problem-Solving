@@ -4,7 +4,7 @@ long long d,s,t,md = 1e9+7;
 
 vector<vector<long long>>a[32];
 
-vector<vector<long long>> matrix_mul(vector<vector<long long>>&cur,int i){
+void matrix_mul(vector<vector<long long>>&cur,int i){
     vector<vector<long long>> ret(d,vector<long long>(d,0));
     int row,col,k;
     for(row = 0; row < d; row++){
@@ -15,20 +15,41 @@ vector<vector<long long>> matrix_mul(vector<vector<long long>>&cur,int i){
             }
         }
     }
-    return ret;
+    a[i+1] = ret;
 }
 
 void matrix_ex(long long int k){
-    vector<vector<long long>>ret(d,vector<long long>(d,0));
-    for(int i = 0;i < d;i++) ret[i][i] = 1;
-
-    for(int i=0;i<30;i++){
-        if((1<<i)&k){
-            ret = matrix_mul(ret,i);
+    vector<long long>row(d,1);
+    
+    int cnt = 0,bit[2],i,j;
+    for(i=0,j=0;i<30;i++){
+        if(k & (1<<i)){
+            cnt++,bit[j++] = i;
+            if(cnt==2) break;
         }
     }
+    if(i==30){
+        cout<<a[bit[0]][s][t]<<'\n';return;
+    }
 
-    cout<<ret[s][t]<<endl;
+    for(int i = 0;i < d;i++) row[i]= a[bit[0]][s][i];
+
+    for(++i;i<30;i++){
+        if(k & (1<<i)){
+            vector<long long>newrow(d,0);
+            for(int x=0;x<d;x++){
+                for(int y=0;y<d;y++){
+                    newrow[x] = (newrow[x]+row[y]*a[i][y][x])%md;
+                }
+            }
+            row = newrow;
+        }
+    }
+    long long ans = 0;
+    for(int x=0;x<d;x++){
+        ans = (ans+row[x]*a[bit[1]][x][t])%md;
+    }
+    cout<<ans<<'\n';
 }
 int main(){
     ios_base::sync_with_stdio(0);
@@ -45,7 +66,7 @@ int main(){
     }
 
     for(int i=1;i<30;i++){
-        a[i] = matrix_mul(a[i-1],i-1);
+        matrix_mul(a[i-1],i-1);
     }
 
     while(q--){
