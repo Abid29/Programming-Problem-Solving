@@ -15,7 +15,8 @@ int main(){
     }
     sort(v.begin(),v.end());
 
-    int B = sqrt(n),id=0;
+    int B = n/sqrt(q),id=0;
+    if(B==0) B=1;
 
     int ll=0,rr=1;
     long long can=0;
