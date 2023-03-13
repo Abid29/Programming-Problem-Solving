@@ -1,0 +1,1 @@
+{"name":"Local: g","url":"f:\\Programming Problem Solving\\atcoder beginner 293\\g.cpp","tests":[{"id":1678651929239,"input":"6 3\n63 66 66 63 63 66\n1 4\n4 6\n1 6","output":"5\n2\n4\n0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Programming Problem Solving\\atcoder beginner 293\\g.cpp","group":"local","local":true}
