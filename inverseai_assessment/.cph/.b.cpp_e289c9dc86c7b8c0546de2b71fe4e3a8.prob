@@ -1,0 +1,1 @@
+{"name":"Local: b","url":"f:\\Programming Problem Solving\\inverseai_assessment\\b.cpp","tests":[{"id":1680505300348,"input":"5\n0000 0\n5566 3\n3333 10\n9999 9\n1234 30","output":"Vinit\nAda\nAda\nVinit\nAda"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Programming Problem Solving\\inverseai_assessment\\b.cpp","group":"local","local":true}

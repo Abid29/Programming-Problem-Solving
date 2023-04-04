@@ -1,0 +1,1 @@
+{"name":"Local: c","url":"f:\\Programming Problem Solving\\cfround861\\c.cpp","tests":[{"id":1680084023036,"input":"5\n59 63\n42 49\n48 53\n90 90\n100 101","output":"63\n44\n53\n90\n1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Programming Problem Solving\\cfround861\\c.cpp","group":"local","local":true}

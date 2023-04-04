@@ -1,7 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 long long mx = (1e18);
-
+//mx = 1e18+1 != 1000000000000000001
+//even 1e18+40 = 1000000000000000000
 long long ex(long long a,long long b){
     long long int ret = 1;
     while(b>0){
