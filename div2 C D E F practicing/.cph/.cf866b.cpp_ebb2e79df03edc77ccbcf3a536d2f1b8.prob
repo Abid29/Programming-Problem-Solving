@@ -1,0 +1,1 @@
+{"name":"Local: cf866b","url":"f:\\Programming Problem Solving\\div2 C D E F practicing\\cf866b.cpp","tests":[{"id":1681550607770,"input":"5\n0\n1\n101\n011110\n101010\n","output":"0\n1\n2\n6\n1\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\Programming Problem Solving\\div2 C D E F practicing\\cf866b.cpp","group":"local","local":true}
